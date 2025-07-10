@@ -7,5 +7,5 @@ export const PageWrapper = ({ children }: WrapperProps) => {
 };
 
 export const ContentWrapper = ({ children }: WrapperProps) => {
-  return <div className="p-8">{children}</div>;
+  return <div className="p-8 flex flex-col">{children}</div>;
 };

@@ -1,14 +1,15 @@
+import { createBrowserRouter, RouterProvider, createRoutesFromElements, Route } from "react-router-dom";
 import CountryDetails from "./page/CountryDetails.tsx";
-import {
-  createBrowserRouter,
-  RouterProvider,
-  createRoutesFromElements,
-  Route,
-} from "react-router-dom";
+import NotFound from "./page/NotFound.tsx";
+import Home from "./page/Home.tsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/country/:countryName" element={<CountryDetails />} />
+    <Route>
+      <Route path="/" element={<Home />} />
+      <Route path="/country/:countryName" element={<CountryDetails />} />
+      <Route path="*" element={<NotFound />} />
+    </Route>
   )
 );
 
